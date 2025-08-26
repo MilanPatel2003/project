@@ -12,6 +12,8 @@
 
   html, body, #root {
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   body {
@@ -32,3 +34,15 @@
 /* Safe area helpers for iOS notch/toolbars */
 .pt-safe-t { padding-top: max(1rem, env(safe-area-inset-top)); }
 .pb-safe-b { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+
+/* Prevent media from causing horizontal overflow */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Guardrails: avoid accidental horizontal scroll in sections */
+section {
+  overflow-x: hidden;
+}
