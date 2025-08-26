@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pb-safe-b pt-safe-t">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900" />
       
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tight"
           >
             Navigate Your
             <span className="block bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed"
           >
             Trident Shipping delivers excellence in maritime logistics with cutting-edge technology, 
             sustainable practices, and unmatched reliability across global trade routes.
@@ -96,12 +96,12 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center w-full sm:w-auto"
           >
             <Button
               size="lg"
               onClick={scrollToContact}
-              className="bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 shadow-xl"
+              className="!bg-white !text-blue-600 hover:!bg-blue-50 hover:!text-blue-700 shadow-xl w-full sm:w-auto"
             >
               Get Quote <FiArrowRight className="ml-2" />
             </Button>
@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
               variant="outline"
               size="lg"
               onClick={scrollToAbout}
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="border-2 border-white/80 text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto"
             >
               Learn More
             </Button>

@@ -28,3 +28,7 @@
     color: white;
   }
 }
+
+/* Safe area helpers for iOS notch/toolbars */
+.pt-safe-t { padding-top: max(1rem, env(safe-area-inset-top)); }
+.pb-safe-b { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }

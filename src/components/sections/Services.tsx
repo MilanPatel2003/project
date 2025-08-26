@@ -135,34 +135,7 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-center mt-16"
-        >
-          <Card className="p-8 bg-gradient-to-r from-blue-600 to-cyan-600">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Need a Custom Solution?
-            </h3>
-            <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
-              Every business has unique shipping requirements. Our team of experts can design 
-              a custom logistics solution that perfectly fits your specific needs and budget.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700"
-              onClick={() => {
-                const element = document.querySelector('#contact');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              Contact Our Experts
-            </Button>
-          </Card>
-        </motion.div>
+        
       </div>
     </section>
   );
