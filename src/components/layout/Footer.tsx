@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-2 mb-6">
-              <FiAnchor className="h-8 w-8 text-blue-400" />
+              <FiAnchor className="h-8 w-8 text-primary-400" />
               <span className="text-2xl font-bold">Trident Shipping</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -56,15 +56,15 @@ const Footer: React.FC = () => {
             </p>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-3 text-gray-300">
-                <FiPhone className="h-4 w-4 text-blue-400" />
+                <FiPhone className="h-4 w-4 text-primary-400" />
                 +1 (555) 123-4567
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <FiMail className="h-4 w-4 text-blue-400" />
+                <FiMail className="h-4 w-4 text-primary-400" />
                 contact@tridentshipping.com
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <FiMapPin className="h-4 w-4 text-blue-400" />
+                <FiMapPin className="h-4 w-4 text-primary-400" />
                 123 Maritime Way, Harbor City, HC 12345
               </div>
             </div>
@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
                 <motion.a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-600 transition-colors duration-200"
+                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-primary-600 transition-colors duration-200"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.name}
@@ -167,13 +167,13 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} Trident Shipping Company. All rights reserved.
           </div>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+            <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">
               Cookie Policy
             </a>
           </div>

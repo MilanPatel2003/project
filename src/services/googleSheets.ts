@@ -1,7 +1,7 @@
 import { ContactFormData } from '../types';
 
-// Google Sheets integration
-const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+// Google Sheets integration (direct URL, no env required)
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxR4b0e7e3uDRM8PO9XQpLgK40zB98qXJcDT9eMTjB8z0U6JF4GNEhGjnpft2ZA0QAh/exec';
 
 export const submitToGoogleSheets = async (data: ContactFormData): Promise<boolean> => {
   try {
@@ -13,6 +13,8 @@ export const submitToGoogleSheets = async (data: ContactFormData): Promise<boole
     const response = await fetch(GOOGLE_SHEETS_URL, {
       method: 'POST',
       body: formData,
+      // Apps Script handles CORS for published web apps; this ensures cookies aren't sent
+      credentials: 'omit'
     });
 
     return response.ok;

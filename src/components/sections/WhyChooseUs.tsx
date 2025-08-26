@@ -62,7 +62,7 @@ const WhyChooseUs: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Why Choose Trident?
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto mb-6" />
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover the advantages that make Trident Shipping the preferred choice for businesses 
             worldwide seeking reliable, efficient, and cost-effective maritime logistics solutions.
@@ -82,13 +82,13 @@ const WhyChooseUs: React.FC = () => {
                 {/* Icon */}
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-2xl mb-6 group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors"
+                  className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-2xl mb-6 group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors"
                 >
                   {benefit.icon}
                 </motion.div>
 
                 {/* Stat */}
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
                   {benefit.stat}
                 </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400 mb-4">

@@ -65,7 +65,7 @@ const Services: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Our Services
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto mb-6" />
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Comprehensive shipping and logistics solutions tailored to meet your specific business needs, 
             from small packages to large-scale industrial projects.
@@ -90,7 +90,7 @@ const Services: React.FC = () => {
                   </div>
                 )}
                 
-                <div className="text-blue-600 dark:text-blue-400 mb-6">
+                <div className="text-primary-600 dark:text-primary-400 mb-6">
                   {service.icon}
                 </div>
                 
@@ -112,7 +112,7 @@ const Services: React.FC = () => {
                       transition={{ duration: 0.3, delay: (index * 0.1) + (featureIndex * 0.05) }}
                       className="flex items-center text-gray-600 dark:text-gray-300"
                     >
-                      <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mr-3" />
+                      <div className="w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mr-3" />
                       {feature}
                     </motion.li>
                   ))}

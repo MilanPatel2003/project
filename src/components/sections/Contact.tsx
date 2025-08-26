@@ -4,7 +4,7 @@ import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 import { ContactFormData } from '../../types';
-import { mockSubmitToGoogleSheets } from '../../services/googleSheets';
+import { submitToGoogleSheets } from '../../services/googleSheets';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -63,8 +63,7 @@ const Contact: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      // Using mock function for demonstration
-      const success = await mockSubmitToGoogleSheets(formData);
+      const success = await submitToGoogleSheets(formData);
       
       if (success) {
         setSubmitStatus('success');
@@ -99,7 +98,7 @@ const Contact: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-6" />
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto mb-6" />
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ready to ship with confidence? Contact our expert team for personalized quotes and solutions 
             tailored to your specific logistics needs.
@@ -126,14 +125,14 @@ const Contact: React.FC = () => {
                     whileHover={{ x: 4 }}
                     className="flex items-start space-x-4"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center text-primary-600 dark:text-primary-400">
                       {info.icon}
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white">{info.title}</h4>
                       <a 
                         href={info.link}
-                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                       >
                         {info.details}
                       </a>
@@ -143,7 +142,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <Card className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-700 dark:to-gray-600 border-0">
+            <Card className="p-6 bg-gradient-to-br from-primary-50 to-accent-50 dark:from-gray-700 dark:to-gray-600 border-0">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Business Hours
               </h4>
@@ -160,7 +159,7 @@ const Contact: React.FC = () => {
                   <span>Sunday</span>
                   <span>Emergency Only</span>
                 </div>
-                <div className="pt-2 mt-2 border-t border-gray-200 dark:border-gray-500 text-blue-600 dark:text-blue-400 font-medium">
+                <div className="pt-2 mt-2 border-t border-gray-200 dark:border-gray-500 text-primary-600 dark:text-primary-400 font-medium">
                   24/7 Customer Support Available
                 </div>
               </div>

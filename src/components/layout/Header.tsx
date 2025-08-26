@@ -37,9 +37,9 @@ const Header: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-200 dark:border-gray-700' 
-          : 'bg-transparent'
+        isScrolled
+          ? 'bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl ring-1 ring-black/5 dark:ring-white/10 shadow-md'
+          : 'bg-white/10 dark:bg-gray-900/20 backdrop-blur-lg ring-1 ring-white/20 dark:ring-white/10'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
             className="flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
           >
-            <FiAnchor className={`h-8 w-8 ${isScrolled ? 'text-blue-600 dark:text-blue-400' : 'text-white'}`} />
+            <FiAnchor className={`h-8 w-8 ${isScrolled ? 'text-primary-600 dark:text-primary-400' : 'text-white'}`} />
             <span className={`text-xl font-bold ${isScrolled ? 'text-gray-900 dark:text-white' : 'text-white'}`}>
               Trident Shipping
             </span>
@@ -61,7 +61,7 @@ const Header: React.FC = () => {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`${isScrolled ? 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white/90 hover:text-white'} px-3 py-2 text-sm font-medium transition-colors`}
+                className={`${isScrolled ? 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400' : 'text-white/90 hover:text-white'} px-3 py-2 text-sm font-medium transition-colors`}
                 whileHover={{ y: -2 }}
               >
                 {item.name}
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-700"
+            className="md:hidden bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl ring-1 ring-black/5 dark:ring-white/10"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
